@@ -103,7 +103,7 @@ Tooltips: {
 			Healing spells heal 25% more hp
 			Healing spells apply a protective bubble to their target,
 			granting +5% damage reduction for 5 seconds
-			10% increased radiant attack speed
+			25% increased radiant attack speed
 			'''
 		CorruptTooltip:
 			'''
@@ -111,7 +111,7 @@ Tooltips: {
 			All health costs are reduced by 1
 			Spending health envelopes you in a corrupted bubble,
 			granting +10% damage, but you take 5% more damage
-			10% increased radiant attack speed
+			25% increased radiant attack speed
 			'''
 	}
 }
@@ -986,8 +986,11 @@ Items: {
 		Tooltip:
 			'''
 			Sends out homing stars, that split into homing shards.
+			Playing success will increase the number of shards.
 			Right-click to play the [c/00FFC8:Interstellar Stomper] riff!
 			While the riff is active, stars rain down from above.
+			Homings shard count is doubled while the riff is active.
+			Time your attacks during the riff to reduce the cooldown
 			'''
 	}
 
@@ -1005,9 +1008,9 @@ Items: {
 		DisplayName: Profanity Filter
 		Tooltip:
 			'''
-			Electronic weapons have 10% reduced damage, but 35% increased playing speed
+			Electronic weapons have 10% reduced damage, but 50% increased playing speed
 			15% increased symphonic damage for weapons that are not Electronic
-			5% increased symphonic critical chance
+			10% increased symphonic critical chance
 			Increases maximum inspiration by 4
 			Symphonic damage has a 10% chance to increase the level of one of your active empowerments. 
 			This effect can only trigger once every 2.5 seconds.
