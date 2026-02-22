@@ -167,7 +167,7 @@ namespace RagnarokMod.Projectiles.BardPro.String
             Player player = Main.player[Projectile.owner];
             if (player.GetRagnarokModPlayer().activeRiffType == RiffLoader.RiffType<AureusRiff>())
             {
-                return 4;
+                return 3;
             }
             else return 2;
         }
