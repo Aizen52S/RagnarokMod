@@ -153,7 +153,7 @@ namespace RagnarokMod.Common.GlobalItems
         private static Dictionary<string, int> thorium_damage_tweak = new Dictionary<string, int> {
             {"WoodenBaton", 9},
 			{"Tambourine", 13},
-			{"Pill", 12}
+			{"Pill", 12},
             {"Didgeridoo", 19},
             {"ThunderTalon", 17},
             {"TalonBurst", 7},
