@@ -1029,6 +1029,20 @@ Items: {
 			Radio Mic now inflicts Charmed for 5 seconds
 			'''
 	}
+
+	RelicOfConvergenceOverride: {
+		Tooltip:
+			'''
+			Creates a profaned crystal at the cursor that channels a healing aura before shattering
+			All players within the area of effect are healed for {0} + 4x healing bonus HP
+			Allies gain 50% extra healing
+			Holding out the crystal decreases defense and increases incoming damage
+			[c/FF8C00:Never once had I known kindness. Neither my peers or family had a shred of compassion for me.]
+			[c/FF8C00:I wished for someone I could confide. A presence that cleansed me of anxiety.]
+			[c/FF8C00:And when I saw Her radiant smile when we met, I knew I had finally found it.]
+			'''
+		DisplayName: Relic of Convergence
+	}
 }
 
 Projectiles: {
@@ -1140,6 +1154,7 @@ Projectiles: {
 	InfectedPustule.DisplayName: Infected Pustule
 	InfectedSporeCloud.DisplayName: Infected Spore Cloud
 	InfectedSporeFire.DisplayName: Infected Spore Fire
+	RelicOfConvergenceCrystalOverride.DisplayName: Relic Of Convergence Crystal Override
 }
 
 Configs: {
