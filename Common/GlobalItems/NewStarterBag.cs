@@ -13,9 +13,12 @@ namespace RagnarokMod.Common.GlobalItems{
         }
 
         public override void ModifyItemLoot(Item item, ItemLoot itemLoot){
-                itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<Flute>(), 1, 1, 1));
-				itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<InspirationFragment>(), 1, 1, 1));
-				itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<Pill>(), 1, 150, 150));
+                itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<Tambourine>(), 1, 1, 1));
+				itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<Pill>(), 1, 200, 200));
+        }
+		
+		public override bool IsLoadingEnabled(Mod mod){
+            return (!(ModLoader.HasMod("WHummusMultiModBalancing") || ModLoader.HasMod("InfernalEclipseAPI")));
         }
     }
 }
