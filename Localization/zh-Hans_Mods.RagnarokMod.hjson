@@ -261,6 +261,8 @@ Items: {
 		Tooltip: 发射追踪的无际裂变弹幕，被击中的敌人会被硫磺火灼烧
 	}
 
+	// CelestialManaCost: 20% decreased mana cost
+
 	DaedalusHeadBard: {
 		DisplayName: 代达罗斯风帽
 		Tooltip:

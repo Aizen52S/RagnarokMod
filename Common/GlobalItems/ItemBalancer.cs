@@ -49,6 +49,8 @@ namespace RagnarokMod.Common.GlobalItems
         private static int throwingGuideVol2Type;
         private static int throwingGuideVol3Type;
         private static int theOmegaCoreType;
+		private static int celestialvestment;
+		private static int celestialleggings;
 
         private static List<string> pointblankshots = new List<string> {
             "FrostFury",
@@ -212,6 +214,8 @@ namespace RagnarokMod.Common.GlobalItems
             throwingGuideVol2Type = T("ThrowingGuideVolume2");
             throwingGuideVol3Type = T("ThrowingGuideVolume3");
             theOmegaCoreType = T("TheOmegaCore");
+			celestialvestment = T("CelestialVestment");
+			celestialleggings = T("CelestialLeggings");
 
             // Tool power overrides
             ToolPowerOverrides = new Dictionary<int, Action<Item>>
@@ -271,8 +275,8 @@ namespace RagnarokMod.Common.GlobalItems
                 { T("FallenPaladinGreaves"), (0f, 0.15f, 0.85f) },
                 { T("WhisperingLeggings"), (0f, 0.15f, 0.85f) },
                 { T("CelestialCrown"), (-2f, 0.20f, 0.80f) },
-                { T("CelestialVestment"), (-3f, 0.25f, 0.75f) },
-                { T("CelestialLeggings"), (-2f, 0.25f, 0.75f) },
+                { T("CelestialVestment"), (-3f, 0.25f, 0.80f) },
+                { T("CelestialLeggings"), (-2f, 0.25f, 0.80f) },
                 { T("DreamWeaversHood"), (-4f, 0.35f, 0.65f) },
                 { T("DreamWeaversTabard"), (-2f, 0.2f, 0.8f) },
                 { T("DreamWeaversTreads"), (-2f, 0.20f, 0.80f) },
@@ -523,6 +527,13 @@ namespace RagnarokMod.Common.GlobalItems
                     OverrideColor = Color.Red
                 };
                 tooltips.Add(newLine);
+            }
+			if (item.type == celestialvestment || item.type == celestialleggings){
+                for (int i = 0; i < tooltips.Count; i++){
+                    if (tooltips[i].Text.Contains("cost")){
+                        tooltips[i].Text = Language.GetTextValue("Mods.RagnarokMod.Items.CelestialManaCost");
+                    }
+                }
             }
         }
     }

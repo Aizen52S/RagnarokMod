@@ -74,10 +74,10 @@ namespace RagnarokMod.Items.HealerItems.Armor
             ThoriumPlayer thoriumPlayer = player.GetThoriumPlayer();
             player.GetDamage(DamageClass.Generic) -= 0.6f;
             player.GetDamage(ThoriumDamageBase<HealerDamage>.Instance) += 1.0f;
-            thoriumPlayer.healBonus += 6;
+            thoriumPlayer.healBonus += 7;
             player.GetCritChance(ThoriumDamageBase<HealerDamage>.Instance) += 15f;
             player.statManaMax2 += 60;
-            player.manaCost *= 0.85f;
+            player.manaCost *= 0.80f;
 
         }
         public override void AddRecipes()

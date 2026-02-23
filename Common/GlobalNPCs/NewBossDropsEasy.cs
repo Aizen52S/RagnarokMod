@@ -1,4 +1,5 @@
 ﻿using CalamityMod;
+using CalamityMod.Items.Tools;
 using CalamityMod.Items.SummonItems;
 using CalamityMod.Items.TreasureBags;
 using CalamityMod.Items.Weapons.Magic;
@@ -13,6 +14,7 @@ using CalamityMod.NPCs.Leviathan;
 using CalamityMod.NPCs.OldDuke;
 using CalamityMod.NPCs.Perforator;
 using CalamityMod.NPCs.Polterghast;
+using CalamityMod.NPCs.ProfanedGuardians;
 using CalamityMod.NPCs.Providence;
 using CalamityMod.NPCs.SulphurousSea;
 using CalamityMod.NPCs.SupremeCalamitas;
@@ -29,6 +31,7 @@ using RagnarokMod.Items.HealerItems.Other;
 using RagnarokMod.Items.HealerItems.Scythes;
 using RagnarokMod.Items.Materials;
 using RagnarokMod.Items.RevItems;
+using RagnarokMod.Items.HealerItems.CalamityOverrides;
 using RagnarokMod.Utils;
 using Terraria;
 using Terraria.GameContent.ItemDropRules;
@@ -75,6 +78,7 @@ namespace RagnarokMod.Common.GlobalNPCs
             || npc.type == ModContent.NPCType<DesertScourgeHead>()
             || npc.type == ModContent.NPCType<Anahita>()
             || npc.type == ModContent.NPCType<Leviathan>()
+			|| npc.type == ModContent.NPCType<ProfanedGuardianHealer>()
             );
         }
 
@@ -250,6 +254,12 @@ namespace RagnarokMod.Common.GlobalNPCs
                 lastWorm.OnSuccess(DropHelper.NormalVsExpertQuantity(ModContent.ItemType<ShootingStarFragment>(), 1, 16, 24, 20, 32));
                 lastWorm.OnSuccess(DropHelper.NormalVsExpertQuantity(ModContent.ItemType<WhiteDwarfFragment>(), 1, 16, 24, 20, 32));
             }
+
+			if (npc.type == ModContent.NPCType<ProfanedGuardianHealer>()){
+                npcLoot.RemoveWhere(rule => rule is CommonDrop drop && drop.itemId == ModContent.ItemType<RelicOfConvergence>());
+				npcLoot.Add(ModContent.ItemType<RelicOfConvergenceOverride>(), 4, 1, 1);
+            }
+
 
             if (npc.type == ModContent.NPCType<Providence>())
             {
