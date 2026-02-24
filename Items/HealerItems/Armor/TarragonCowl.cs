@@ -54,7 +54,7 @@ namespace RagnarokMod.Items.HealerItems.Armor
         public override void UpdateArmorSet(Player player)
         {
 
-            player.setBonus = "Increased heart pickup range\nEnemies have a chance to drop extra hearts on death\nA Guardian healer will assist you in healing your allies\nHeals ally life equal to your bonus healing + 5 health\nand grants them the Guardian Healers Blessing for 20 seconds";
+            player.setBonus = this.GetLocalizedValue("SetBonus");
             CalamityPlayer calamityPlayer = player.Calamity();
             calamityPlayer.tarraSet = true;
             player.GetRagnarokModPlayer().tarraHealer = true;

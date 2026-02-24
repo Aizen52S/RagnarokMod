@@ -54,7 +54,7 @@ namespace RagnarokMod.Items.HealerItems.Armor
             CalamityPlayer calamityPlayer = player.Calamity();
             calamityPlayer.silvaSet = true;
             //calamityPlayer.silvaMage = true;
-            player.setBonus = ILocalizedModTypeExtensions.GetLocalizedValue(this, "SetBonus") + "\n" + CalamityUtils.GetTextValueFromModItem<SilvaArmor>("CommonSetBonus");
+            player.setBonus = this.GetLocalizedValue("SetBonus") + "\n" + CalamityUtils.GetTextValueFromModItem<SilvaArmor>("CommonSetBonus");
             player.GetRagnarokModPlayer().silvaHealer = true;
         }
 
