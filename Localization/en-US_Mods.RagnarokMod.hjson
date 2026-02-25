@@ -326,6 +326,10 @@ Items: {
 			Healed allies will be granted 50 more maximum health
 			Occasionally you will be blessed by heals or life shields
 			Will trigger more frequently on low health
+			+3 HP/s life regen
+			5% increased max run speed and acceleration
+			Taking fatal damage will revive you and make you invulnerable to all damage for 5 seconds
+			This effect has a 5 minute cooldown, which does not decrement if any bosses or events are active
 			'''
 	}
 
