@@ -1042,6 +1042,11 @@ Items: {
 			''' */
 		// DisplayName: Relic of Convergence
 	}
+
+	CorroslimeBass: {
+		// Tooltip: ""
+		// DisplayName: Corroslime Bass
+	}
 }
 
 Projectiles: {
@@ -1154,6 +1159,7 @@ Projectiles: {
 	InfectedSporeCloud.DisplayName: Infected Spore Cloud
 	InfectedSporeFire.DisplayName: Infected Spore Fire
 	// RelicOfConvergenceCrystalOverride.DisplayName: Relic Of Convergence Crystal Override
+	// CorroslimeBassPro.DisplayName: Corroslime Bass Pro
 }
 
 Configs: {

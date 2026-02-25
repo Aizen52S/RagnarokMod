@@ -16,6 +16,7 @@ using CalamityMod.NPCs.Perforator;
 using CalamityMod.NPCs.Polterghast;
 using CalamityMod.NPCs.ProfanedGuardians;
 using CalamityMod.NPCs.Providence;
+using CalamityMod.NPCs.SlimeGod;
 using CalamityMod.NPCs.SulphurousSea;
 using CalamityMod.NPCs.SupremeCalamitas;
 using CalamityMod.NPCs.Yharon;
@@ -79,6 +80,7 @@ namespace RagnarokMod.Common.GlobalNPCs
             || npc.type == ModContent.NPCType<Anahita>()
             || npc.type == ModContent.NPCType<Leviathan>()
 			|| npc.type == ModContent.NPCType<ProfanedGuardianHealer>()
+			|| npc.type == ModContent.NPCType<SlimeGodCore>()
             );
         }
 
@@ -292,6 +294,12 @@ namespace RagnarokMod.Common.GlobalNPCs
                 LeadingConditionRule lastAlive = (LeadingConditionRule)notExpert.OnSuccess(npcLoot.DefineConditionalDropSet(Leviathan.LastAnLStanding));
                 lastAlive.OnSuccess(ItemDropRule.Common(ModContent.ItemType<LeviathanHeart>(), 4));
                 lastAlive.OnSuccess(ItemDropRule.Common(ModContent.ItemType<SirenScale>(), 4));
+                npcLoot.Add(notExpert);
+            }
+			if (npc.type == ModContent.NPCType<SlimeGodCore>())
+            {
+                LeadingConditionRule notExpert = new LeadingConditionRule(new Conditions.NotExpert());
+                notExpert.OnSuccess(ItemDropRule.Common(ModContent.ItemType<CorroslimeBass>(), 4));
                 npcLoot.Add(notExpert);
             }
         }

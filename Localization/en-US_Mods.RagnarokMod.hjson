@@ -434,13 +434,6 @@ Items: {
 			Maximum mana increased by 60
 			Mana usage reduced by 20%
 			'''
-		SetBonus:
-			'''
-			A Guardian healer will assist you in healing your allies
-			Heals ally life equal to your bonus healing + 5 health
-			and grants them the Guardian Healers Blessing for 20 seconds
-			{$CalamityMod.Items.Armor.PostMoonLord.TarragonBreastplate.CommonSetBonus}
-			'''
 	}
 
 	TarragonShroud: {
@@ -454,13 +447,6 @@ Items: {
 			+15% chance for inspiration notes to drop from enemies
 			+4 maximum inspiration
 			'''
-		SetBonus:
-			'''
-			A Guardian healer will assist you in healing your allies
-			Heals ally life equal to your bonus healing + 5 health
-			and grants them the Guardian Healers Blessing for 20 seconds
-			{$CalamityMod.Items.Armor.PostMoonLord.TarragonBreastplate.CommonSetBonus}
-			'''
 	}
 
 	VictideHeadHealer: {
@@ -470,6 +456,9 @@ Items: {
 			'''
 			Enemies are less likely to target you
 			+3 life regen and 10% increased radiant but 10% decreased non-radiant damage while submerged in liquid
+			When using any weapon you have a 10% chance to throw a returning seashell projectile
+			This seashell does true damage and does not benefit from any damage class
+			Provides increased underwater mobility and slightly reduces breath loss in the abyss
 			'''
 	}
 
@@ -517,6 +506,9 @@ Items: {
 			'''
 			Enemies are less likely to target you
 			+3 life regen and 10% increased symphonic damage while submerged in liquid
+			When using any weapon you have a 10% chance to throw a returning seashell projectile
+			This seashell does true damage and does not benefit from any damage class
+			Provides increased underwater mobility and slightly reduces breath loss in the abyss
 			'''
 	}
 
@@ -938,7 +930,6 @@ Items: {
 	PrimalTerror: {
 		DisplayName: Primal Terror
 		Tooltip: Keep me favorited ;P
-		HasAwoken: The Primordial Wyrm has awoken!
 	}
 
 	DevourerOfSines: {
@@ -1058,6 +1049,16 @@ Items: {
 			'''
 		DisplayName: Relic of Convergence
 	}
+
+	CorroslimeBass: {
+		Tooltip:
+			'''
+			Sends out bouncing corroslime balls.
+			Right click to split balls into {0} smaller balls.
+			This process can be done {1} times.
+			'''
+		DisplayName: Corroslime Bass
+	}
 }
 
 Projectiles: {
@@ -1170,6 +1171,7 @@ Projectiles: {
 	InfectedSporeCloud.DisplayName: Infected Spore Cloud
 	InfectedSporeFire.DisplayName: Infected Spore Fire
 	RelicOfConvergenceCrystalOverride.DisplayName: Relic Of Convergence Crystal Override
+	CorroslimeBassPro.DisplayName: Corroslime Bass Pro
 }
 
 Configs: {
